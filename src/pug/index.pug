@@ -7,7 +7,8 @@ html(lang="en")
         title Сайт-портфолио Разиной Элины
         link(rel="stylesheet", href="./css/reset.css")
         link(rel="stylesheet", href="./css/style.css")
-        link(href="https://fonts.googleapis.com/css?family=Roboto"  rel="stylesheet")
+        link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous")
+        link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
     body
         header
             //- nav.menu
@@ -28,6 +29,9 @@ html(lang="en")
             p.about-name erazina.info
             hr
             h1.about-descriptioin Сайт-портфолио
+
+        #portfolio
+
         //- #tech
         //-     .flex-container
         //-         h2 Технологии
@@ -76,7 +80,10 @@ html(lang="en")
         //-     p.contact-resume
         //-         a Скачать резюме
 
-        //- footer.
-        //-     p Разина Элина, 
-        //-         - let date = new Date();
-        //-         span #{date.getFullYear()}
+        footer.footer
+            .social
+                a(href='https://vk.com/razina_elina' target="_blank")
+                    i.fab.fa-vk(aria-hidden='true')
+            p Разина Элина, 
+                - let date = new Date();
+                span #{date.getFullYear()}
