@@ -26,11 +26,21 @@ html(lang="en")
             //-         li.menu-list-item 
             //-             a(href='#blog') Блог
         #about.about
-            p.about-name erazina.info
-            hr
-            h1.about-descriptioin Сайт-портфолио
+            h1.about-descriptioin UI-developer.
+            a.about-link(href="") contact me
 
-        #portfolio
+
+        .portfolaio#portfolio
+            h2 Мои последние работы
+            .portfolio-card
+
+            .portfolio-card
+            .portfolio-card
+            .portfolio-card
+            .portfolio-card
+            .portfolio-card
+            .portfolio-card
+            button Посмотреть больше
 
         //- #tech
         //-     .flex-container
@@ -81,9 +91,12 @@ html(lang="en")
         //-         a Скачать резюме
 
         footer.footer
+            p.copyright
+                | &copy
+                - let date = new Date();
+                span #{date.getFullYear()} Elina Razina. All rights reserved. 
             .social
                 a(href='https://vk.com/razina_elina' target="_blank")
                     i.fab.fa-vk(aria-hidden='true')
-            p Разина Элина, 
-                - let date = new Date();
-                span #{date.getFullYear()}
+                a(href="https://www.instagram.com/razina_elina/")
+                    i.fab.fa-instagram(aria-hidden='true')
