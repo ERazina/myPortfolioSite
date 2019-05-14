@@ -8,8 +8,30 @@ html(lang="en")
         link(rel="stylesheet", href="./css/reset.css")
         link(rel="stylesheet", href="./css/style.css")
         link(rel="stylesheet", href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous")
-        link(href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet")
+        //- link(rel="stylesheet", href="../node_modules/bootstrap/")
     body
+        .modal#modal.closed.modal-layer
+            .about-me
+                .upper-block
+                    .photo
+                    .social
+                        a.social-link(href='https://vk.com/razina_elina' data-title="vkontakte" target="_blank")
+                            i.fab.fa-vk(aria-hidden='true')
+                        a.social-link(href="https://www.instagram.com/razina_elina/" data-title="instagramm" target="_blank")
+                            i.fab.fa-instagram(aria-hidden='true')
+                        a.social-link(href="https://teleg.run/Elina_Razina" data-title="@Elina_Razina" target="_blank")
+                            i.fab.fa-telegram(aria-hidden='true')
+                        a.social-link.download(href="./files/cv.pdf" data-title="cv" target="_blank")
+                            i.far.fa-file(aria-hidden='true')
+                .description-block
+                    //- h2 Elina Razina
+                    p.description
+                    | I graduated in 2018 with a degree in Computer Science.
+                    p.description
+                    | I have a broad knowledge of the HTML, CSS and preprocessors, JS, npm, git and other technologies.
+
+            i.far.fa-times-circle#close.close
         header
             //- nav.menu
             //-     ul.menu-list
@@ -26,33 +48,47 @@ html(lang="en")
             //-         li.menu-list-item 
             //-             a(href='#blog') Блог
         #about.about
-            h1.about-descriptioin UI-developer.
-            a.about-link(href="") contact me
+            h1.about-descriptioin 
+                strong UI-DEVELOPER
+            //- hr
+            //- .social
+            //-     a.social-link(href='https://vk.com/razina_elina' target="_blank")
+            //-         i.fab.fa-vk(aria-hidden='true')
+            //-     a.social-link(href="https://www.instagram.com/razina_elina/" target="_blank")
+            //-         i.fab.fa-instagram(aria-hidden='true')
+            //-     a.social-link(href="https://www.instagram.com/razina_elina/" target="_blank")
+            //-         i.fab.fa-telegram(aria-hidden='true')
+            a.about-modal-link#link(href="#") about me
+            //- a#scroll.scroll
+            //-     i.fa.fa-angle-double-down
+            //-         span.btn-slide.top
+            //-         span.btn-slide.right
+            //-         span.btn-slide.bottom
+            //-         span.btn-slide.left
 
 
-        .portfolaio#portfolio
-            h2 Мои последние работы
-            .portfolio-card
-
-            .portfolio-card
-            .portfolio-card
-            .portfolio-card
-            .portfolio-card
-            .portfolio-card
-            .portfolio-card
-            button Посмотреть больше
 
 
-        //- .skills
-        //- h2 My skills levels
-        //-     .skill
-        //-         svg class="circleSvg" height="180" width="180">
+            //- a.about-link(href="/contact.html") contact me
 
-        //-         circle id="circle1" class="circleAnimate" cx="-40" cy="40" r="68" style="stroke-dashoffset: 430px; stroke-dasharray: 900px;" stroke-dasharray="430" stroke-width="8px" stroke="#16ADA1" fill="#2FD6CA" stroke-dashoffset="60" transform="translate(50,50) rotate(-90)"></circle>
-        //-         text id="text1" x="63" y="100" fill="#fff" font-family="Verdana" font-size="28"
-        //-         | 100
-        //-         span 
-        //-             |HTML 5
+
+        //- .portfolaio#portfolio
+        //-     h2 My Work
+        //-     .portfolio-card
+
+        //-     .portfolio-card
+        //-     .portfolio-card
+        //-     .portfolio-card
+        //-     a.about-link(href="") view more projects
+
+        .skills#skills
+            h2.h2heading My skill levels
+            .skill
+                #progressBar
+                    div#inner
+        //-         svg(width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg")
+        //-             circle(cx="50" cy="50" r="48" fill="#434343" stroke-width="5" stroke="rgb(0,0,0)" text="HTML")
+        //-             text 100
 
         //- #tech
         //-     .flex-container
@@ -102,6 +138,9 @@ html(lang="en")
         //-     p.contact-resume
         //-         a Скачать резюме
 
+        //- контакты
+
+
         footer.footer
             p.copyright
                 | &copy
@@ -110,5 +149,8 @@ html(lang="en")
             .social
                 a(href='https://vk.com/razina_elina' target="_blank")
                     i.fab.fa-vk(aria-hidden='true')
-                a(href="https://www.instagram.com/razina_elina/")
+                a(href="https://www.instagram.com/razina_elina/" target="_blank")
                     i.fab.fa-instagram(aria-hidden='true')
+                a.social-link(href="https://teleg.run/Elina_Razina" data-title="@Elina_Razina" target="_blank")
+                    i.fab.fa-telegram(aria-hidden='true')
+    script(src="./js/script.js")

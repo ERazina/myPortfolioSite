@@ -44,14 +44,21 @@ gulp.task('html', function() {
     .pipe(gulp.dest('build'));
 });
 
+
+// files
+gulp.task('files', function() {
+  gulp.src('src/files/*.*')
+    .pipe(gulp.dest('build/files'));
+});
+
 // Сжатие javascript
 gulp.task('js', function() {
   return gulp.src('src/js/*.js')
-    .pipe(plumber())
-    .pipe(uglyjs())
-    .pipe(rename(function (path) {
-      path.basename += ".min"
-    }))
+    // .pipe(plumber())
+    // .pipe(uglyjs())
+    // .pipe(rename(function (path) {
+    //   path.basename += ".min"
+    // }))
     .pipe(gulp.dest('build/js'));
 });
 
@@ -89,6 +96,7 @@ gulp.task('default', function() {
     gulp.run('sass');
     gulp.run('fonts');
     gulp.run('js');
+    gulp.run('files');
     gulp.run('browser-sync');
 
     gulp.watch('./src/scss/**/*.scss', ['sass']);
