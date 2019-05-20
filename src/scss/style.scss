@@ -143,7 +143,6 @@ body{
 // реализована концепция  mobile-first
     .about{
         min-height: 100%;
-        // background-color: rgba(30, 154, 255, 0.6);
         background-color: rgba(9, 10, 10, 0.6);
         background-image: linear-gradient(to top, rgba(21, 22, 23, 0.6), rgba(21, 21, 22,0.6)),
         url('../img/cover.jpg');
@@ -259,6 +258,8 @@ body{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
 
         h2{
             @include h2;
@@ -308,14 +309,21 @@ body{
                     padding-bottom: 16px;
                     width: 200px;
                 }
+                .portfolio-link:hover{
+                    text-decoration: none;
+                    color: $c;
+                    border: 1px solid #ffffff;
+                    background: $white;
+                   
+                }
             }
             .portfolio-card:first-child{
                 background-image: linear-gradient(to top, rgba(21, 22, 23, 0.6), rgba(21, 21, 22,0.6)),
-                url('../img/cover.jpg');
+                url('../img/113.jpg');
             }
             .portfolio-card:nth-child(2){
                 background-image: linear-gradient(to top, rgba(21, 22, 23, 0.6), rgba(21, 21, 22,0.6)),
-                url('../img/cover.jpg');
+                url('../img/bcg-video-slider-03.png');
             }
             .portfolio-card:nth-child(3){
                 background-image: linear-gradient(to top, rgba(21, 22, 23, 0.6), rgba(21, 21, 22,0.6)),
@@ -332,8 +340,38 @@ body{
             // }
         }
 
+        .about-link{
+            display: flex;
+            justify-content: center;
+            color: $c;
+            border: 1px solid $c;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            width: 200px;
+            font-size: 16px;
+            font-family: 'PT Sans', Tahoma, Verdana, sans-serif;
+            height: 16px;
+            text-transform: lowercase;
+            height: 50px;
+            border-radius: 0px;
+        }
 
+        .about-link:hover{
+            color: $white;
+            background: $c;
+            border: 1px solid $c;
+        }
 
+    }
+
+    .soon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(21, 22, 23, 0.6));
     }
 
     .skills{
@@ -505,6 +543,8 @@ body{
         font-family: 'PT Sans', Tahoma, Verdana, sans-serif;
 
     }
+
+
 }
 
 @media (min-width: 1024px) {
@@ -519,6 +559,12 @@ body{
 
         hr{
             width: 250px;
+        }
+    }
+    .portfolio {
+        .wrap-container{
+            justify-content: center;
+            flex-direction: row;
         }
     }
 }

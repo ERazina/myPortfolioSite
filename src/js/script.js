@@ -35,19 +35,26 @@ document.addEventListener('mouseup', (e) => {
 });
 
 let bar = document.getElementById('progressBar');
-let inner = ocument.getElementById('inner');
-function progressBar(percent, element){
+let inner = document.getElementById('inner');
+// function progressBar(percent, element){
 
-	var progressBarWidth = percent * element.width() / 100;
+// 	// var progressBarWidth = percent * element.width() / 100;
 
-	inner.animate({
-		width: progressBarWidth
-	}, 500).html(percent + "%&nbsp;");
-};
+// 	inner.animate({
+// 		width: progressBarWidth
+// 	}, 500).html(percent + "%&nbsp;");
+// };
 
-progressBar(50, (bar));
+// progressBar(50, (bar));
 
 scroll.addEventListener('click', (e) => {
-    skills.scrollTop = 100 + 'px';
+    // e.preventDefault();
+    // let id = e.target.parentElement;
+    
+    let id  = e.target.parentElement.getAttribute('href');
+    // console.log(id);
+    let top = skills.getBoundingClientRect().top;
+    // console.log(top);
+    // skills.scrollTop = 100 + 'px';
 });
 
